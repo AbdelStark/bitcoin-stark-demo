@@ -4,6 +4,7 @@ This repository contains everything needed to run the demo of a STARK proof veri
 
 ## Resources
 
-- [Bitcoin Circle STARK repository](https://github.com/Bitcoin-Wildlife-Sanctuary/bitcoin-circle-stark)
+- [Bitcoin Circle STARK repository](https://github.com/Bitcoin-Wildlife-Sanctuary/bitcoin-circle-stark) - [Signet Demo Transactions](https://github.com/Bitcoin-Wildlife-Sanctuary/bitcoin-circle-stark/pull/91)
 - Liquid: [Website](https://blockstream.com/liquid/) - [Docs](https://docs.liquid.net/docs/welcome-to-liquid-developer-documentation-portal) - [Explorer](https://blockstream.info/liquid/)
 - Catnet: [Repo](https://github.com/Bitcoin-Wildlife-Sanctuary/catnet) -[Explorer](https://catnet-mempool.btcwild.life/) - [Faucet](https://catnet-faucet.btcwild.life/)
+- [How to verify ZK proofs on Bitcoin by Polyhedra](https://hackmd.io/@polyhedra/bitcoin)
