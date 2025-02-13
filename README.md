@@ -16,6 +16,23 @@ This repository contains everything needed to run the demo of a STARK proof veri
 ./scripts/send_demo_txs.sh -d ./catnet-txs
 ```
 
+Transaction flow strategy:
+
+```bash
+# Default strategy (sequential)
+./scripts/send_demo_txs.sh ./catnet-txs
+
+# Timed strategy with 5 second pause
+./scripts/send_demo_txs.sh -s timed -p 5 ./catnet-txs
+# or
+TX_FLOW_STRATEGY=timed TX_PAUSE_SECONDS=5 ./scripts/send_demo_txs.sh ./catnet-txs
+
+# Per-block strategy with 5 transactions per block
+./scripts/send_demo_txs.sh -s per-block -n 5 ./catnet-txs
+# or
+TX_FLOW_STRATEGY=per-block TX_PER_BLOCK=5 ./scripts/send_demo_txs.sh ./catnet-txs
+```
+
 ## Resources
 
 - [Bitcoin Circle STARK repository](https://github.com/Bitcoin-Wildlife-Sanctuary/bitcoin-circle-stark) - [Signet Demo Transactions](https://github.com/Bitcoin-Wildlife-Sanctuary/bitcoin-circle-stark/pull/91)

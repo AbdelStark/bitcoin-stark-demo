@@ -139,4 +139,23 @@ All 72 transactions have been generated and stored in the current directory.
 
 After this, you have a directory containing the 72 transactions.
 
+There is a current issue with the transaction flow that prevents sending multiple transactions in the same block.
 
+```text
+error code: -26
+error message:
+too-long-mempool-chain, exceeds descendant size limit for tx 80dbe2fb7aac91e2ed372ff87c424936065dc46f4762a619f81ad35445cf1719 [limit: 101000]
+```
+
+```text
+From @weikengchen:
+- Although the ten transactions can, in theory, be submitted
+together and settled in 1 block, in our experiment, we can only
+push one transaction per block.
+- Due to default mempool limits on limitancestorsize,
+limitdescendantsize.
+- Solution: we are planning on a new transaction flow design
+that bypasses limitancestorsize and limitdescendantsize.
+```
+
+While waiting for a new strategy, we will have to send one transaction per block.
