@@ -2,6 +2,20 @@
 
 This repository contains everything needed to run the demo of a STARK proof verification on Liquid.
 
+## Demo
+
+### Catnet
+
+```bash
+# Normal mode - actually sends transactions
+./scripts/send_demo_txs.sh ./catnet-txs
+
+# Dry run mode - simulates sending transactions
+./scripts/send_demo_txs.sh --dry-run ./catnet-txs
+# or
+./scripts/send_demo_txs.sh -d ./catnet-txs
+```
+
 ## Resources
 
 - [Bitcoin Circle STARK repository](https://github.com/Bitcoin-Wildlife-Sanctuary/bitcoin-circle-stark) - [Signet Demo Transactions](https://github.com/Bitcoin-Wildlife-Sanctuary/bitcoin-circle-stark/pull/91)
