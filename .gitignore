@@ -26,3 +26,5 @@ build
 .env
 
 .DS_Store
+
+demo_params.env

@@ -7,7 +7,7 @@ if [[ -f .env ]]; then
 fi
 
 ################################################################################
-#                                  CONSTANTS                                     #
+#                                  CONSTANTS                                   #
 ################################################################################
 
 readonly FIRST_TX=1
@@ -58,7 +58,7 @@ print_usage() {
 }
 
 log() {
-  echo "[$(date +'%Y-%m-%d %H:%M:%S')] $1"
+  echo "[$(date +'%Y-%m-%d %H:%M:%S')] $1" >&2
 }
 
 error() {
@@ -72,7 +72,7 @@ is_transaction_confirmed() {
   
   # Get transaction info
   local confirmations
-  confirmations=$(eval "$bitcoin_cli getrawtransaction $tx_id 1 2>/dev/null | jq -r '.confirmations // 0'")
+  confirmations=$(eval "$bitcoin_cli getrawtransaction \"$tx_id\" 1 2>/dev/null | jq -r '.confirmations // 0'")
   
   # Check if we got a valid number
   if [[ "$confirmations" =~ ^[0-9]+$ ]]; then
@@ -142,7 +142,7 @@ handle_transaction_flow() {
       # If we've sent txs_per_block transactions, wait for confirmation
       if ((tx_num % txs_per_block == 0)); then
         if [[ $run_mode -eq $DRY_RUN ]]; then
-          log "[DRY RUN] Would wait for transaction confirmation: $last_tx_id"
+          log "[DRY RUN] Would wait for confirmation of transaction: $last_tx_id"
           return 0
         fi
         
@@ -172,9 +172,10 @@ send_transaction() {
   log "Sending transaction $tx_num/$total ($(basename "$tx_file"))"
   
   if [[ $run_mode -eq $DRY_RUN ]]; then
+    local simulated_txid="tx_$(printf "%03d" "$tx_num")_simulated_hash"
     log "[DRY RUN] Would execute: $bitcoin_cli sendrawtransaction \"$raw_tx\""
-    log "[DRY RUN] Simulating successful transaction: tx_$(printf "%03d" "$tx_num")_simulated_hash"
-    echo "tx_$(printf "%03d" "$tx_num")_simulated_hash"
+    log "[DRY RUN] Simulating successful transaction: $simulated_txid"
+    echo "$simulated_txid"
     return 0
   fi
   
