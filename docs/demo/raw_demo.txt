@@ -1,0 +1,272 @@
+./scripts/send_demo_txs.sh -s per-block -n 5 ./catnet-txs
+[2025-02-13 16:52:47] Starting transaction sending process
+[2025-02-13 16:52:47] Using directory: ./catnet-txs
+[2025-02-13 16:52:47] Using bitcoin-cli command: /Users/abdel/dev/bitcoin/bitcoin-inquisition/bitcoin/src/bitcoin-cli -rpcconnect=catnet.btcwild.life -rpcport=38332 -rpcuser=catnet -rpcpassword=stark -datadir=/Users/abdel/.bitcoin/catnet/
+[2025-02-13 16:52:47] Transaction flow strategy: per-block
+[2025-02-13 16:52:47] Transactions per block: 5
+[2025-02-13 16:52:47] Sending transaction 1/72 (tx-1.txt)
+[2025-02-13 16:52:48] Transaction sent successfully: 91c4d94f18b432b71d849742d92fb392c5e894c69c1649471f098ed7f583c16b
+[2025-02-13 16:52:48] Progress: 1% (1/72 transactions processed)
+[2025-02-13 16:52:48] Sending transaction 2/72 (tx-2.txt)
+[2025-02-13 16:52:50] Transaction sent successfully: dce56e0bdcc6be7749d9cd0a1353d9d6ee79e409c9b44b0e8ec583bfb2d23276
+[2025-02-13 16:52:50] Progress: 2% (2/72 transactions processed)
+[2025-02-13 16:52:50] Sending transaction 3/72 (tx-3.txt)
+[2025-02-13 16:52:51] Transaction sent successfully: 84291847278f169254b660c2608016bbfed572ce461092fa4d683478d8cba659
+[2025-02-13 16:52:51] Progress: 4% (3/72 transactions processed)
+[2025-02-13 16:52:51] Sending transaction 4/72 (tx-4.txt)
+[2025-02-13 16:52:51] Transaction sent successfully: 4a3adb10f54aac4b476c1b9a97e5c3804e2c0f5ca04eb45fc9fac91025207ca5
+[2025-02-13 16:52:51] Progress: 5% (4/72 transactions processed)
+[2025-02-13 16:52:51] Sending transaction 5/72 (tx-5.txt)
+[2025-02-13 16:52:52] Transaction sent successfully: f8d85ccfec0eb5b532ea2402d9dc43e7ffbbe1fee98a12d10d793ae14de40d32
+[2025-02-13 16:52:52] Progress: 6% (5/72 transactions processed)
+[2025-02-13 16:52:52] Reached 5 transactions, waiting for confirmation of tx: f8d85ccfec0eb5b532ea2402d9dc43e7ffbbe1fee98a12d10d793ae14de40d32
+[2025-02-13 16:53:38] Transaction f8d85ccfec0eb5b532ea2402d9dc43e7ffbbe1fee98a12d10d793ae14de40d32 confirmed after 45s
+[2025-02-13 16:53:38] Batch confirmed, proceeding with next transactions
+[2025-02-13 16:53:38] Sending transaction 6/72 (tx-6.txt)
+[2025-02-13 16:53:39] Transaction sent successfully: 198438d85b85c568c578641dc2f1dad4433e28b00b6120a82bc10bb0df7d9bd7
+[2025-02-13 16:53:39] Progress: 8% (6/72 transactions processed)
+[2025-02-13 16:53:39] Sending transaction 7/72 (tx-7.txt)
+[2025-02-13 16:53:40] Transaction sent successfully: 2daa946391b185f0b39099f173c5d6a122e5f0657df351bb668f1a053717100b
+[2025-02-13 16:53:40] Progress: 9% (7/72 transactions processed)
+[2025-02-13 16:53:40] Sending transaction 8/72 (tx-8.txt)
+[2025-02-13 16:53:41] Transaction sent successfully: 07fc622236a24d1ba7c638248146141970970e012e05bb005e7b51de9cccd47e
+[2025-02-13 16:53:41] Progress: 11% (8/72 transactions processed)
+[2025-02-13 16:53:41] Sending transaction 9/72 (tx-9.txt)
+[2025-02-13 16:53:42] Transaction sent successfully: 6424784dcb577680f2085950e39d28e083df65b6a0703efb40c2a16dcb5ab062
+[2025-02-13 16:53:42] Progress: 12% (9/72 transactions processed)
+[2025-02-13 16:53:42] Sending transaction 10/72 (tx-10.txt)
+[2025-02-13 16:53:43] Transaction sent successfully: d671742a12ef59e841b086c42b3f9b48b335b0195aa2607b9f6e5bed2575cec3
+[2025-02-13 16:53:43] Progress: 13% (10/72 transactions processed)
+[2025-02-13 16:53:43] Reached 5 transactions, waiting for confirmation of tx: d671742a12ef59e841b086c42b3f9b48b335b0195aa2607b9f6e5bed2575cec3
+[2025-02-13 17:04:10] Transaction d671742a12ef59e841b086c42b3f9b48b335b0195aa2607b9f6e5bed2575cec3 confirmed after 626s
+[2025-02-13 17:04:10] Batch confirmed, proceeding with next transactions
+[2025-02-13 17:04:10] Sending transaction 11/72 (tx-11.txt)
+[2025-02-13 17:04:11] Transaction sent successfully: 55bca6a1212b9d184179e0a02213a8d67e6ee80ca2dd6b6cf089d0e1d6bdcfb5
+[2025-02-13 17:04:11] Progress: 15% (11/72 transactions processed)
+[2025-02-13 17:04:11] Sending transaction 12/72 (tx-12.txt)
+[2025-02-13 17:04:12] Transaction sent successfully: 365d06745f41caa977929f28ed1fd3c00c2be06833e899bf6ad057e29d0451cc
+[2025-02-13 17:04:12] Progress: 16% (12/72 transactions processed)
+[2025-02-13 17:04:12] Sending transaction 13/72 (tx-13.txt)
+[2025-02-13 17:04:13] Transaction sent successfully: 1da99350ba9ca4e9b66638a8945c15babcbbdb8316205831d0d029adbdec896b
+[2025-02-13 17:04:13] Progress: 18% (13/72 transactions processed)
+[2025-02-13 17:04:13] Sending transaction 14/72 (tx-14.txt)
+[2025-02-13 17:04:14] Transaction sent successfully: ee6ecf0039fa5cf888bfb75e48e04e7f6faf885eb8cef46c75210935629a3599
+[2025-02-13 17:04:14] Progress: 19% (14/72 transactions processed)
+[2025-02-13 17:04:14] Sending transaction 15/72 (tx-15.txt)
+[2025-02-13 17:04:14] Transaction sent successfully: 127a620afd12cd7d800cf940c9319e4a548741b920c132a33cc29b9c4b68b019
+[2025-02-13 17:04:14] Progress: 20% (15/72 transactions processed)
+[2025-02-13 17:04:14] Reached 5 transactions, waiting for confirmation of tx: 127a620afd12cd7d800cf940c9319e4a548741b920c132a33cc29b9c4b68b019
+[2025-02-13 17:13:41] Transaction 127a620afd12cd7d800cf940c9319e4a548741b920c132a33cc29b9c4b68b019 confirmed after 566s
+[2025-02-13 17:13:41] Batch confirmed, proceeding with next transactions
+[2025-02-13 17:13:41] Sending transaction 16/72 (tx-16.txt)
+[2025-02-13 17:13:42] Transaction sent successfully: 2c9b64e0ef67da319a08fc9ea29c9f877c191fc4e2fb57c4df5bb1f2890adbb4
+[2025-02-13 17:13:42] Progress: 22% (16/72 transactions processed)
+[2025-02-13 17:13:42] Sending transaction 17/72 (tx-17.txt)
+[2025-02-13 17:13:43] Transaction sent successfully: d7b1d222588c72bb46c9e3ed0c67d4ef9fcc684b07fa23fb6f2352b0a3496a3d
+[2025-02-13 17:13:43] Progress: 23% (17/72 transactions processed)
+[2025-02-13 17:13:43] Sending transaction 18/72 (tx-18.txt)
+[2025-02-13 17:13:44] Transaction sent successfully: 96c1f38cb7f4bd22ee1b77f27bf459577a28d40eeca773e7cf7e2a265d655fed
+[2025-02-13 17:13:44] Progress: 25% (18/72 transactions processed)
+[2025-02-13 17:13:44] Sending transaction 19/72 (tx-19.txt)
+[2025-02-13 17:13:45] Transaction sent successfully: 3b5682b6f0e4bc6502e9694b22d8d69774e72e0a156af3482d49584e4055eb8e
+[2025-02-13 17:13:45] Progress: 26% (19/72 transactions processed)
+[2025-02-13 17:13:45] Sending transaction 20/72 (tx-20.txt)
+[2025-02-13 17:13:46] Transaction sent successfully: a4a4f39990d5d4567207969a6304e1381370b5f544faeab9b28f1a854da6d323
+[2025-02-13 17:13:46] Progress: 27% (20/72 transactions processed)
+[2025-02-13 17:13:46] Reached 5 transactions, waiting for confirmation of tx: a4a4f39990d5d4567207969a6304e1381370b5f544faeab9b28f1a854da6d323
+[2025-02-13 17:24:50] Transaction a4a4f39990d5d4567207969a6304e1381370b5f544faeab9b28f1a854da6d323 confirmed after 663s
+[2025-02-13 17:24:50] Batch confirmed, proceeding with next transactions
+[2025-02-13 17:24:50] Sending transaction 21/72 (tx-21.txt)
+[2025-02-13 17:24:51] Transaction sent successfully: 6aceb4ecbeba8146547602b6b8d7b6ce0272f78f6f782757c9d5ee31ce1dbc1c
+[2025-02-13 17:24:51] Progress: 29% (21/72 transactions processed)
+[2025-02-13 17:24:51] Sending transaction 22/72 (tx-22.txt)
+[2025-02-13 17:24:51] Transaction sent successfully: d1075895ab2a917712f02410567c1d831d70ca0dc36774b2f34f46f9165fe007
+[2025-02-13 17:24:51] Progress: 30% (22/72 transactions processed)
+[2025-02-13 17:24:52] Sending transaction 23/72 (tx-23.txt)
+[2025-02-13 17:24:52] Transaction sent successfully: e0be2c63c812820e9023e285548d676bf3c02da46206db24657eba69f8f968be
+[2025-02-13 17:24:52] Progress: 31% (23/72 transactions processed)
+[2025-02-13 17:24:52] Sending transaction 24/72 (tx-24.txt)
+[2025-02-13 17:24:53] Transaction sent successfully: 7a6d4ecc1ed53af77cd5c0e669340712f9d1aca779e78990ee0b77adeaece363
+[2025-02-13 17:24:53] Progress: 33% (24/72 transactions processed)
+[2025-02-13 17:24:53] Sending transaction 25/72 (tx-25.txt)
+[2025-02-13 17:24:54] Transaction sent successfully: 0cb5a040fd37c2093bb9b332cd7929d752f26effe9f0bed394f508948dafeec6
+[2025-02-13 17:24:54] Progress: 34% (25/72 transactions processed)
+[2025-02-13 17:24:54] Reached 5 transactions, waiting for confirmation of tx: 0cb5a040fd37c2093bb9b332cd7929d752f26effe9f0bed394f508948dafeec6
+[2025-02-13 17:33:37] Transaction 0cb5a040fd37c2093bb9b332cd7929d752f26effe9f0bed394f508948dafeec6 confirmed after 522s
+[2025-02-13 17:33:37] Batch confirmed, proceeding with next transactions
+[2025-02-13 17:33:37] Sending transaction 26/72 (tx-26.txt)
+[2025-02-13 17:33:38] Transaction sent successfully: a2d32c5911351f115c45803de0132a9704ab35bc8360722e32301a600975426e
+[2025-02-13 17:33:38] Progress: 36% (26/72 transactions processed)
+[2025-02-13 17:33:38] Sending transaction 27/72 (tx-27.txt)
+[2025-02-13 17:33:39] Transaction sent successfully: af0104b4c3eed72c090fe1ec75e0d46a0f6a5c82d3a3b5718bd2d21bd72dd183
+[2025-02-13 17:33:39] Progress: 37% (27/72 transactions processed)
+[2025-02-13 17:33:39] Sending transaction 28/72 (tx-28.txt)
+[2025-02-13 17:33:40] Transaction sent successfully: 956d9879f9b17bde601ef7dd3e65de850582e281efa18776b0a5fc5ae0782184
+[2025-02-13 17:33:40] Progress: 38% (28/72 transactions processed)
+[2025-02-13 17:33:40] Sending transaction 29/72 (tx-29.txt)
+[2025-02-13 17:33:41] Transaction sent successfully: 92fc3e7305f5fe2d6a6128d8822e3c70816744cc16234fbfc9441ddc28d730b5
+[2025-02-13 17:33:41] Progress: 40% (29/72 transactions processed)
+[2025-02-13 17:33:41] Sending transaction 30/72 (tx-30.txt)
+[2025-02-13 17:33:42] Transaction sent successfully: d699e3cd3e01b34de8bd9d7300e2c9a75f944ae3774719efa935f469a68ca94f
+[2025-02-13 17:33:42] Progress: 41% (30/72 transactions processed)
+[2025-02-13 17:33:42] Reached 5 transactions, waiting for confirmation of tx: d699e3cd3e01b34de8bd9d7300e2c9a75f944ae3774719efa935f469a68ca94f
+[2025-02-13 17:43:57] Transaction d699e3cd3e01b34de8bd9d7300e2c9a75f944ae3774719efa935f469a68ca94f confirmed after 614s
+[2025-02-13 17:43:57] Batch confirmed, proceeding with next transactions
+[2025-02-13 17:43:57] Sending transaction 31/72 (tx-31.txt)
+[2025-02-13 17:43:58] Transaction sent successfully: b8398c22674f663f1770de2b36cb072c14c8946b72281e3b90989510f2427149
+[2025-02-13 17:43:58] Progress: 43% (31/72 transactions processed)
+[2025-02-13 17:43:58] Sending transaction 32/72 (tx-32.txt)
+[2025-02-13 17:43:59] Transaction sent successfully: 268868c2449246cbc320d58fecd6549e2266e19f678d0aad7fff2ceaeda69e35
+[2025-02-13 17:43:59] Progress: 44% (32/72 transactions processed)
+[2025-02-13 17:43:59] Sending transaction 33/72 (tx-33.txt)
+[2025-02-13 17:44:00] Transaction sent successfully: f2dcd5a87c553f96e5608f39a872cc652acb7cf770968c85e23bf16faa940acf
+[2025-02-13 17:44:00] Progress: 45% (33/72 transactions processed)
+[2025-02-13 17:44:00] Sending transaction 34/72 (tx-34.txt)
+[2025-02-13 17:44:01] Transaction sent successfully: 07a8b42e6bfbaf486609a09585b4b44b3a48db73817dcccc4e1e7a8068fb447f
+[2025-02-13 17:44:01] Progress: 47% (34/72 transactions processed)
+[2025-02-13 17:44:01] Sending transaction 35/72 (tx-35.txt)
+[2025-02-13 17:44:02] Transaction sent successfully: 895f66fe401927d7484722cf0f87bbe497ed97af83f082498919b66f1a43e79d
+[2025-02-13 17:44:02] Progress: 48% (35/72 transactions processed)
+[2025-02-13 17:44:02] Reached 5 transactions, waiting for confirmation of tx: 895f66fe401927d7484722cf0f87bbe497ed97af83f082498919b66f1a43e79d
+[2025-02-13 17:53:40] Transaction 895f66fe401927d7484722cf0f87bbe497ed97af83f082498919b66f1a43e79d confirmed after 577s
+[2025-02-13 17:53:40] Batch confirmed, proceeding with next transactions
+[2025-02-13 17:53:40] Sending transaction 36/72 (tx-36.txt)
+[2025-02-13 17:53:41] Transaction sent successfully: c6bcd174477606a117932de0ed35e09eb14c90ecb24433711e0100369e6f5d0e
+[2025-02-13 17:53:41] Progress: 50% (36/72 transactions processed)
+[2025-02-13 17:53:41] Sending transaction 37/72 (tx-37.txt)
+[2025-02-13 17:53:42] Transaction sent successfully: a32702d8d1a86b90858818bccdd1507f3ca0f06980a5e97bc6b1ab3754cf0fc9
+[2025-02-13 17:53:42] Progress: 51% (37/72 transactions processed)
+[2025-02-13 17:53:42] Sending transaction 38/72 (tx-38.txt)
+[2025-02-13 17:53:43] Transaction sent successfully: eb99e5f2d0e1cb7665980469a3e0e1bb364ab3915592d89b3d31d2744c42f1cb
+[2025-02-13 17:53:43] Progress: 52% (38/72 transactions processed)
+[2025-02-13 17:53:43] Sending transaction 39/72 (tx-39.txt)
+[2025-02-13 17:53:44] Transaction sent successfully: bcff4d92c3172ef7fd17622f8a03e723a9a73080fdaac261d66876a23755946c
+[2025-02-13 17:53:44] Progress: 54% (39/72 transactions processed)
+[2025-02-13 17:53:44] Sending transaction 40/72 (tx-40.txt)
+[2025-02-13 17:53:45] Transaction sent successfully: 041d143c343e009da9b432fd68fe61fc4416d994bf1d0ead6cfa59924646b818
+[2025-02-13 17:53:45] Progress: 55% (40/72 transactions processed)
+[2025-02-13 17:53:45] Reached 5 transactions, waiting for confirmation of tx: 041d143c343e009da9b432fd68fe61fc4416d994bf1d0ead6cfa59924646b818
+[2025-02-13 18:03:54] Transaction 041d143c343e009da9b432fd68fe61fc4416d994bf1d0ead6cfa59924646b818 confirmed after 608s
+[2025-02-13 18:03:54] Batch confirmed, proceeding with next transactions
+[2025-02-13 18:03:54] Sending transaction 41/72 (tx-41.txt)
+[2025-02-13 18:03:55] Transaction sent successfully: 04e2aaffd389fb18288d54941021c86e84d1eb8aa5055d8796d0428e60049be9
+[2025-02-13 18:03:55] Progress: 56% (41/72 transactions processed)
+[2025-02-13 18:03:55] Sending transaction 42/72 (tx-42.txt)
+[2025-02-13 18:03:56] Transaction sent successfully: 62a1c4ff8290108e782c74ff06ad29d4bf54dc931b115ec4c9c8f290198fc838
+[2025-02-13 18:03:56] Progress: 58% (42/72 transactions processed)
+[2025-02-13 18:03:56] Sending transaction 43/72 (tx-43.txt)
+[2025-02-13 18:03:57] Transaction sent successfully: ccaa240f9e7753ddabe8d55f8af73a5b9ea9df1078c36a6d9a0c153cee926419
+[2025-02-13 18:03:57] Progress: 59% (43/72 transactions processed)
+[2025-02-13 18:03:57] Sending transaction 44/72 (tx-44.txt)
+[2025-02-13 18:03:58] Transaction sent successfully: 5cb921813e4d8106043ff5fad2deef56cfda9ca62307013f03a43475df68e2ec
+[2025-02-13 18:03:58] Progress: 61% (44/72 transactions processed)
+[2025-02-13 18:03:58] Sending transaction 45/72 (tx-45.txt)
+[2025-02-13 18:03:59] Transaction sent successfully: 1b24c935243ebe66ce62eb7891425a7aa6b5fa9dfd78451c91749cb080d2358c
+[2025-02-13 18:03:59] Progress: 62% (45/72 transactions processed)
+[2025-02-13 18:03:59] Reached 5 transactions, waiting for confirmation of tx: 1b24c935243ebe66ce62eb7891425a7aa6b5fa9dfd78451c91749cb080d2358c
+[2025-02-13 18:14:10] Transaction 1b24c935243ebe66ce62eb7891425a7aa6b5fa9dfd78451c91749cb080d2358c confirmed after 610s
+[2025-02-13 18:14:10] Batch confirmed, proceeding with next transactions
+[2025-02-13 18:14:10] Sending transaction 46/72 (tx-46.txt)
+[2025-02-13 18:14:11] Transaction sent successfully: 1e05b6a2f198c104f20c186e4e2d37cc9c9aa2ca83b935567f832588cef4fbdb
+[2025-02-13 18:14:11] Progress: 63% (46/72 transactions processed)
+[2025-02-13 18:14:11] Sending transaction 47/72 (tx-47.txt)
+[2025-02-13 18:14:12] Transaction sent successfully: f420dedbd9fa1430ab1aebf02ad5221b2f1ac5bf7a25608866240e6db585e81f
+[2025-02-13 18:14:12] Progress: 65% (47/72 transactions processed)
+[2025-02-13 18:14:12] Sending transaction 48/72 (tx-48.txt)
+[2025-02-13 18:14:13] Transaction sent successfully: 78dc1ff50c81a127417a323483fde03cc8fba0fa0953f0b3221c775fe349f70c
+[2025-02-13 18:14:13] Progress: 66% (48/72 transactions processed)
+[2025-02-13 18:14:13] Sending transaction 49/72 (tx-49.txt)
+[2025-02-13 18:14:14] Transaction sent successfully: 4cd65be238d49ff70f9a2b43de8d9761ec1a6fd7b10ae3c7ea248a104c3c7a13
+[2025-02-13 18:14:14] Progress: 68% (49/72 transactions processed)
+[2025-02-13 18:14:14] Sending transaction 50/72 (tx-50.txt)
+[2025-02-13 18:14:15] Transaction sent successfully: 80a6ddefa5ba4124942582facfc0c44ebcea942bf11ed389eb600213dcb63fdd
+[2025-02-13 18:14:15] Progress: 69% (50/72 transactions processed)
+[2025-02-13 18:14:15] Reached 5 transactions, waiting for confirmation of tx: 80a6ddefa5ba4124942582facfc0c44ebcea942bf11ed389eb600213dcb63fdd
+[2025-02-13 18:24:18] Transaction 80a6ddefa5ba4124942582facfc0c44ebcea942bf11ed389eb600213dcb63fdd confirmed after 602s
+[2025-02-13 18:24:18] Batch confirmed, proceeding with next transactions
+[2025-02-13 18:24:18] Sending transaction 51/72 (tx-51.txt)
+[2025-02-13 18:24:19] Transaction sent successfully: 6579f2bd903a7559c9227914ceb36bbc37bbf625daf7525829f07b4b9c13e716
+[2025-02-13 18:24:19] Progress: 70% (51/72 transactions processed)
+[2025-02-13 18:24:19] Sending transaction 52/72 (tx-52.txt)
+[2025-02-13 18:24:20] Transaction sent successfully: 25d185b2a3f73c84d4e71674cea2a1b370498ebc83ce4655e9cc2b88325b944a
+[2025-02-13 18:24:20] Progress: 72% (52/72 transactions processed)
+[2025-02-13 18:24:20] Sending transaction 53/72 (tx-53.txt)
+[2025-02-13 18:24:21] Transaction sent successfully: 1d6bb8db1c5eb2967b9063db91454f01f74420074a7e1e9ee907d069ebbb2f8c
+[2025-02-13 18:24:21] Progress: 73% (53/72 transactions processed)
+[2025-02-13 18:24:21] Sending transaction 54/72 (tx-54.txt)
+[2025-02-13 18:24:22] Transaction sent successfully: b8596520659f9a9264d1dcc0dbb6c56504481cb42d393ef134b6ace1b086ee5b
+[2025-02-13 18:24:22] Progress: 75% (54/72 transactions processed)
+[2025-02-13 18:24:22] Sending transaction 55/72 (tx-55.txt)
+[2025-02-13 18:24:23] Transaction sent successfully: 05093bee4627a382ee6823a0807e5b5b018bbc50925983f2d9e16d457b9bc7ae
+[2025-02-13 18:24:23] Progress: 76% (55/72 transactions processed)
+[2025-02-13 18:24:23] Reached 5 transactions, waiting for confirmation of tx: 05093bee4627a382ee6823a0807e5b5b018bbc50925983f2d9e16d457b9bc7ae
+[2025-02-13 18:34:01] Transaction 05093bee4627a382ee6823a0807e5b5b018bbc50925983f2d9e16d457b9bc7ae confirmed after 577s
+[2025-02-13 18:34:01] Batch confirmed, proceeding with next transactions
+[2025-02-13 18:34:01] Sending transaction 56/72 (tx-56.txt)
+[2025-02-13 18:34:02] Transaction sent successfully: 80ef2b08ece5f4c6a1f9d83c6f031136ef6df38c5de323da84b2213f2b98a3d3
+[2025-02-13 18:34:02] Progress: 77% (56/72 transactions processed)
+[2025-02-13 18:34:02] Sending transaction 57/72 (tx-57.txt)
+[2025-02-13 18:34:03] Transaction sent successfully: b96287aeb26eaf8c9b6cb35f041d3182fe43488bd728b577932de050c1dbcccd
+[2025-02-13 18:34:03] Progress: 79% (57/72 transactions processed)
+[2025-02-13 18:34:03] Sending transaction 58/72 (tx-58.txt)
+[2025-02-13 18:34:04] Transaction sent successfully: 7165d1176787c92fbb3fcb32d47634a50de9ae7c19aa45595c7dd120744de1aa
+[2025-02-13 18:34:04] Progress: 80% (58/72 transactions processed)
+[2025-02-13 18:34:04] Sending transaction 59/72 (tx-59.txt)
+[2025-02-13 18:34:05] Transaction sent successfully: d0e664e918cd22a807e99936ac0330c0ca6581efcd0f442d3894ba1391a40d33
+[2025-02-13 18:34:05] Progress: 81% (59/72 transactions processed)
+[2025-02-13 18:34:05] Sending transaction 60/72 (tx-60.txt)
+[2025-02-13 18:34:06] Transaction sent successfully: e3ad9559ec55ee96ec5dc73f07bb7f67dc250baab5ff96fca5310eb8f31f6352
+[2025-02-13 18:34:06] Progress: 83% (60/72 transactions processed)
+[2025-02-13 18:34:06] Reached 5 transactions, waiting for confirmation of tx: e3ad9559ec55ee96ec5dc73f07bb7f67dc250baab5ff96fca5310eb8f31f6352
+[2025-02-13 18:45:36] Transaction e3ad9559ec55ee96ec5dc73f07bb7f67dc250baab5ff96fca5310eb8f31f6352 confirmed after 689s
+[2025-02-13 18:45:36] Batch confirmed, proceeding with next transactions
+[2025-02-13 18:45:36] Sending transaction 61/72 (tx-61.txt)
+[2025-02-13 18:45:37] Transaction sent successfully: 92a953f808f1760c058d52ff87838b995ac9ccfba8dba949065893c69dbb31f1
+[2025-02-13 18:45:37] Progress: 84% (61/72 transactions processed)
+[2025-02-13 18:45:37] Sending transaction 62/72 (tx-62.txt)
+[2025-02-13 18:45:38] Transaction sent successfully: 0d610536bdd435d6404bb662ec9661611c8c7844a033d935fc26c4005e32e69a
+[2025-02-13 18:45:38] Progress: 86% (62/72 transactions processed)
+[2025-02-13 18:45:38] Sending transaction 63/72 (tx-63.txt)
+[2025-02-13 18:45:39] Transaction sent successfully: 1d5fe400f35fc23f93fc57ced9dc4590e7955f171b0bf7e1452e5304d4e7af58
+[2025-02-13 18:45:39] Progress: 87% (63/72 transactions processed)
+[2025-02-13 18:45:39] Sending transaction 64/72 (tx-64.txt)
+[2025-02-13 18:45:40] Transaction sent successfully: 188b898d0b7641249f8e379544131732aed15908780bd5e4dd41b81d732551a5
+[2025-02-13 18:45:40] Progress: 88% (64/72 transactions processed)
+[2025-02-13 18:45:40] Sending transaction 65/72 (tx-65.txt)
+[2025-02-13 18:45:41] Transaction sent successfully: 38fc0e77f97ddf0c1e43970f316f6a74367cb9b9ee587859b0b0c9cce7676576
+[2025-02-13 18:45:41] Progress: 90% (65/72 transactions processed)
+[2025-02-13 18:45:41] Reached 5 transactions, waiting for confirmation of tx: 38fc0e77f97ddf0c1e43970f316f6a74367cb9b9ee587859b0b0c9cce7676576
+[2025-02-13 18:53:54] Transaction 38fc0e77f97ddf0c1e43970f316f6a74367cb9b9ee587859b0b0c9cce7676576 confirmed after 492s
+[2025-02-13 18:53:54] Batch confirmed, proceeding with next transactions
+[2025-02-13 18:53:54] Sending transaction 66/72 (tx-66.txt)
+[2025-02-13 18:53:55] Transaction sent successfully: 25207466a340f725ef064bc679af7659a1a8adc05ae21019fcf44a752d4c5198
+[2025-02-13 18:53:55] Progress: 91% (66/72 transactions processed)
+[2025-02-13 18:53:55] Sending transaction 67/72 (tx-67.txt)
+[2025-02-13 18:53:56] Transaction sent successfully: ebb5a801a4b80d1514d1e84a3ff4ef8480794fc1f72ba61aade387f90f179e99
+[2025-02-13 18:53:56] Progress: 93% (67/72 transactions processed)
+[2025-02-13 18:53:56] Sending transaction 68/72 (tx-68.txt)
+[2025-02-13 18:53:57] Transaction sent successfully: 77535e24642f5f2d8696248406059aff28323a1487bf65183a5a5a9f0393f514
+[2025-02-13 18:53:57] Progress: 94% (68/72 transactions processed)
+[2025-02-13 18:53:57] Sending transaction 69/72 (tx-69.txt)
+[2025-02-13 18:53:57] Transaction sent successfully: 66821d9d60240ce46157ab2506534e778aae30c91e44a1123674d64ae4b16e0f
+[2025-02-13 18:53:57] Progress: 95% (69/72 transactions processed)
+[2025-02-13 18:53:57] Sending transaction 70/72 (tx-70.txt)
+[2025-02-13 18:53:58] Transaction sent successfully: fd03421805a9b2eb5b567849eb1fb78a94ff82ac30454a6d88b63cbe250e46c4
+[2025-02-13 18:53:58] Progress: 97% (70/72 transactions processed)
+[2025-02-13 18:53:58] Reached 5 transactions, waiting for confirmation of tx: fd03421805a9b2eb5b567849eb1fb78a94ff82ac30454a6d88b63cbe250e46c4
+[2025-02-13 19:03:47] Transaction fd03421805a9b2eb5b567849eb1fb78a94ff82ac30454a6d88b63cbe250e46c4 confirmed after 588s
+[2025-02-13 19:03:47] Batch confirmed, proceeding with next transactions
+[2025-02-13 19:03:47] Sending transaction 71/72 (tx-71.txt)
+[2025-02-13 19:03:48] Transaction sent successfully: 737ec63b60399d0228749a09fecf17009a828bcf14513d11ce32710b9d98d4ab
+[2025-02-13 19:03:48] Progress: 98% (71/72 transactions processed)
+[2025-02-13 19:03:48] Sending transaction 72/72 (tx-72.txt)
+[2025-02-13 19:03:48] Transaction sent successfully: 4c3bc7a754b331388ccf835bea491c56b32579dfe99965b1aabbbc4190b506af
+[2025-02-13 19:03:48] Progress: 100% (72/72 transactions processed)
+[2025-02-13 19:03:48] Completed!
+----------------------------------------
+SUMMARY
+----------------------------------------
+Total transactions processed: 72
+Strategy used: per-block
+Transactions per block: 5
+----------------------------------------
