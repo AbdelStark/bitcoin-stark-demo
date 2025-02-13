@@ -1,6 +1,6 @@
-# Bitcoin Circle STARK demo on Liquid
+# Bitcoin Circle STARK demo
 
-This repository contains everything needed to run the demo of a STARK proof verification on Liquid.
+This repository contains everything needed to run the demo of a STARK proof verification on various Bitcoin OP_CAT enabled networks.
 
 ## Demo
 
