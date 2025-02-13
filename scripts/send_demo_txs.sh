@@ -2,7 +2,6 @@
 
 set -euo pipefail
 
-# Source an eventual .env file
 if [[ -f .env ]]; then
   source .env
 fi
@@ -13,7 +12,7 @@ fi
 
 readonly FIRST_TX=1
 readonly LAST_TX=72
-readonly DEFAULT_BITCOIN_CLI="bitcoin-cli"
+readonly DEFAULT_BITCOIN_CLI="eval bitcoin-cli"
 readonly DRY_RUN=0
 readonly LIVE_RUN=1
 
@@ -70,7 +69,7 @@ send_transaction() {
   fi
   
   local tx_id
-  tx_id=$($bitcoin_cli sendrawtransaction "$raw_tx")
+  tx_id=$(eval "$bitcoin_cli sendrawtransaction \"$raw_tx\"")
   
   if [[ -n "$tx_id" ]]; then
     log "Transaction sent successfully: $tx_id"
@@ -108,11 +107,6 @@ done
 # Set bitcoin-cli command
 bitcoin_cli=${BITCOIN_CLI_CMD_DEMO:-$DEFAULT_BITCOIN_CLI}
 
-# Validate bitcoin-cli command exists
-if [[ $run_mode -eq $LIVE_RUN ]]; then
-  command -v "$bitcoin_cli" >/dev/null 2>&1 || error "Bitcoin CLI command not found: $bitcoin_cli"
-fi
-
 ################################################################################
 #                              INITIALIZATION                                    #
 ################################################################################
@@ -143,7 +137,7 @@ for ((i=FIRST_TX; i<=LAST_TX; i++)); do
   progress=$((processed_txs * 100 / total_txs))
   log "Progress: $progress% ($processed_txs/$total_txs transactions processed)"
 
-  # Sleep for 1 second
+  # Sleep for 1 second between transactions
   sleep 1
 done
 
