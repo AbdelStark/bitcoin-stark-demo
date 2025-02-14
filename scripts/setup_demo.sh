@@ -16,7 +16,10 @@ readonly DEFAULT_OUTPUT_FILE="demo_params.env"
 
 # Program and state caboose addresses (hardcoded for now)
 readonly PROGRAM_ADDRESS="tb1prns2nf4f79892nl9lv5fjkjsfz4qxw233hv0z46a62z367566plse0rkau"
-readonly STATE_CABOOSE_ADDRESS="tb1qvu62dh2l4d9j09e880musdew6g5ex8n6apx72cx5zafv2mjx6r5qn2hzkf"
+# STATE CABOOSE ADDRESS FOR TESTING (RANDOMIZER = 12)
+#readonly STATE_CABOOSE_ADDRESS="tb1qvu62dh2l4d9j09e880musdew6g5ex8n6apx72cx5zafv2mjx6r5qn2hzkf"
+# STATE CABOOSE ADDRESS FOR TESTING (RANDOMIZER = 18)
+readonly STATE_CABOOSE_ADDRESS="tb1qc0n6rd9jagz4jfyl9qpkfanp083hnk3v59gylznu325agamy7v0qp3aya4"
 
 # Amount calculations (in BTC)
 readonly PROGRAM_AMOUNT="13.42959670"
@@ -142,7 +145,7 @@ save_param "FUNDING_TXID" "$funding_txid" "$output_file"
 
 # Add confirmation check
 log "Waiting for funding transaction confirmation..."
-sleep 10
+sleep 3
 log "Funding transaction confirmed"
 
 # Get transaction details to find the vout
@@ -186,6 +189,10 @@ if [[ -z "$program_txid" ]]; then
   error "Failed to send transaction"
 fi
 log "Program transaction sent: $program_txid"
+# Add confirmation check
+log "Waiting for program transaction confirmation..."
+sleep 3
+log "Program transaction confirmed"
 save_param "INITIAL_PROGRAM_TXID" "$program_txid" "$output_file"
 
 ################################################################################
@@ -208,3 +215,6 @@ log "Setup completed successfully"
 echo
 echo "You can now proceed with generating the demo transactions using:"
 echo "cargo run --bin demo -- -f $funding_txid -i $program_txid" 
+echo "or"
+echo "demo -f $funding_txid -i $program_txid"
+echo "if you have the demo binary in your PATH"

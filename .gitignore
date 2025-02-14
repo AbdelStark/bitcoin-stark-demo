@@ -27,4 +27,6 @@ build
 
 .DS_Store
 
+demo/
 demo_params.env
+demo_transcript.log
