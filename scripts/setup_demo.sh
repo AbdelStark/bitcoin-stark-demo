@@ -14,13 +14,6 @@ readonly DEFAULT_BITCOIN_CLI="eval bitcoin-cli"
 readonly DEFAULT_FUNDING_AMOUNT="13.4356"
 readonly DEFAULT_OUTPUT_FILE="demo_params.env"
 
-# Program and state caboose addresses (hardcoded for now)
-readonly PROGRAM_ADDRESS="tb1prns2nf4f79892nl9lv5fjkjsfz4qxw233hv0z46a62z367566plse0rkau"
-# STATE CABOOSE ADDRESS FOR TESTING (RANDOMIZER = 12)
-#readonly STATE_CABOOSE_ADDRESS="tb1qvu62dh2l4d9j09e880musdew6g5ex8n6apx72cx5zafv2mjx6r5qn2hzkf"
-# STATE CABOOSE ADDRESS FOR TESTING (RANDOMIZER = 18)
-readonly STATE_CABOOSE_ADDRESS="tb1qc0n6rd9jagz4jfyl9qpkfanp083hnk3v59gylznu325agamy7v0qp3aya4"
-
 # Amount calculations (in BTC)
 readonly PROGRAM_AMOUNT="13.42959670"
 readonly STATE_CABOOSE_AMOUNT="0.0000033"
@@ -115,12 +108,18 @@ log "Using bitcoin-cli command: $bitcoin_cli"
 log "Funding amount: $funding_amount BTC"
 log "Output file: $output_file"
 
-# Clear output file if it exists
-> "$output_file"
+# Load existing parameters
+if [[ ! -f "$output_file" ]]; then
+  error "Parameters file not found: $output_file"
+fi
 
-# Save initial parameters
-save_param "PROGRAM_ADDRESS" "$PROGRAM_ADDRESS" "$output_file"
-save_param "STATE_CABOOSE_ADDRESS" "$STATE_CABOOSE_ADDRESS" "$output_file"
+source "$output_file"
+
+if [[ -z "${PROGRAM_ADDRESS:-}" ]] || [[ -z "${STATE_CABOOSE_ADDRESS:-}" ]]; then
+  error "Required addresses not found in $output_file"
+fi
+
+# Save amounts to params file
 save_param "PROGRAM_AMOUNT" "$PROGRAM_AMOUNT" "$output_file"
 save_param "STATE_CABOOSE_AMOUNT" "$STATE_CABOOSE_AMOUNT" "$output_file"
 
@@ -214,7 +213,7 @@ echo
 log "Setup completed successfully"
 echo
 echo "You can now proceed with generating the demo transactions using:"
-echo "cargo run --bin demo -- -f $funding_txid -i $program_txid" 
+echo "cargo run --bin demo -- -f $funding_txid -i $program_txid --randomizer $RANDOMIZER" 
 echo "or"
-echo "demo -f $funding_txid -i $program_txid"
+echo "demo -f $funding_txid -i $program_txid --randomizer $RANDOMIZER"
 echo "if you have the demo binary in your PATH"

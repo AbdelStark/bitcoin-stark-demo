@@ -10,6 +10,7 @@ readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly WORKSPACE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 readonly DEFAULT_TRANSCRIPT_FILE="demo_transcript.log"
 readonly DEFAULT_PARAMS_FILE="demo_params.env"
+readonly DEFAULT_RANDOMIZER=42
 
 ################################################################################
 #                                  FUNCTIONS                                     #
@@ -24,6 +25,7 @@ print_usage() {
   echo "  -b, --break           Add breakpoints between steps"
   echo "  -t, --transcript      Transcript output file (default: $DEFAULT_TRANSCRIPT_FILE)"
   echo "  -p, --params          Parameters output file (default: $DEFAULT_PARAMS_FILE)"
+  echo "  -r, --randomizer      Randomizer value (default: $DEFAULT_RANDOMIZER)"
   echo "  -h, --help           Show this help message"
 }
 
@@ -69,6 +71,15 @@ run_command() {
   log "Successfully completed: $description"
 }
 
+save_param() {
+  local param_name=$1
+  local param_value=$2
+  local output_file=$3
+  
+  echo "export ${param_name}=\"${param_value}\"" >> "$output_file"
+  log "Saved $param_name=$param_value"
+}
+
 ################################################################################
 #                              PARSE ARGUMENTS                                   #
 ################################################################################
@@ -76,6 +87,7 @@ run_command() {
 use_breakpoints=false
 transcript_file="$DEFAULT_TRANSCRIPT_FILE"
 params_file="$DEFAULT_PARAMS_FILE"
+randomizer=$DEFAULT_RANDOMIZER
 
 while [[ $# -gt 0 ]]; do
   case $1 in
@@ -89,6 +101,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     -p|--params)
       params_file=$2
+      shift 2
+      ;;
+    -r|--randomizer)
+      randomizer=$2
       shift 2
       ;;
     -h|--help)
@@ -113,6 +129,7 @@ cd "$WORKSPACE_DIR"
 log "Starting Bitcoin Circle Stark Demo"
 log "Transcript will be saved to: $transcript_file"
 log "Parameters will be saved to: $params_file"
+log "Using randomizer value: $randomizer"
 
 ################################################################################
 #                         STEP 1: GENERATE DEMO PARAMS                          #
@@ -120,16 +137,30 @@ log "Parameters will be saved to: $params_file"
 
 print_section "GENERATING DEMO PARAMETERS"
 
-run_command "gen_demo_params > $params_file" "Generating demo parameters"
-wait_for_user
+# Initialize params file
+> "$params_file"
+save_param "RANDOMIZER" "$randomizer" "$params_file"
 
-if [[ ! -f $params_file ]]; then
-  error "Failed to generate demo parameters"
+# Get program and caboose addresses
+log "Getting program and caboose addresses..."
+demo_params_json=$(gen_demo_params --randomizer "$randomizer")
+if [[ -z "$demo_params_json" ]]; then
+  error "Failed to get demo parameters"
 fi
 
-# Source the parameters
-# TODO: Uncomment when the gen_demo_params is generating a sourceable file
-#source "$params_file"
+# Extract addresses from JSON
+program_address=$(echo "$demo_params_json" | jq -r '.program_address')
+caboose_address=$(echo "$demo_params_json" | jq -r '.caboose_address')
+
+if [[ -z "$program_address" ]] || [[ -z "$caboose_address" ]]; then
+  error "Failed to extract addresses from demo parameters"
+fi
+
+# Save addresses to params file
+save_param "PROGRAM_ADDRESS" "$program_address" "$params_file"
+save_param "STATE_CABOOSE_ADDRESS" "$caboose_address" "$params_file"
+
+wait_for_user
 
 ################################################################################
 #                         STEP 2: SETUP INITIAL STATE                           #
@@ -140,7 +171,7 @@ print_section "SETTING UP INITIAL STATE"
 run_command "./scripts/setup_demo.sh -o $params_file" "Setting up initial transactions"
 wait_for_user
 
-# Re-source the parameters as setup_demo.sh adds more variables
+# Source the parameters as setup_demo.sh adds more variables
 source "$params_file"
 
 if [[ -z "${FUNDING_TXID:-}" ]] || [[ -z "${INITIAL_PROGRAM_TXID:-}" ]]; then
@@ -153,7 +184,7 @@ fi
 
 print_section "RUNNING MAIN DEMO"
 
-run_command "demo -f $FUNDING_TXID -i $INITIAL_PROGRAM_TXID" "Running main demo binary"
+run_command "demo -f $FUNDING_TXID -i $INITIAL_PROGRAM_TXID --randomizer $randomizer" "Running main demo binary"
 wait_for_user
 
 ################################################################################
@@ -166,7 +197,7 @@ if [[ ! -d "./demo" ]]; then
   error "Demo transaction directory not found"
 fi
 
-run_command "./scripts/send_demo_txs.sh -s per-block -n 7 ./demo" "Sending demo transactions"
+run_command "./scripts/send_demo_txs.sh ./demo" "Sending demo transactions"
 
 ################################################################################
 #                                 SUMMARY                                        #
