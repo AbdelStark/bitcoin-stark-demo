@@ -24,8 +24,8 @@ rpcallowip=0.0.0.0/0  # Caution: This allows all IPs; consider narrowing this ra
 rpcbind=0.0.0.0       # This binds the RPC server to all network interfaces
 rpcbind=::   
 rpcport=38332
-rpcuser=catnet
-rpcpassword=stark
+rpcuser=RPC_USER
+rpcpassword=RPC_PASSWORD
 limitancestorcount=250
 limitdescendantcount=250
 ```

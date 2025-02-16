@@ -184,7 +184,7 @@ fi
 
 print_section "RUNNING MAIN DEMO"
 
-run_command "demo -f $FUNDING_TXID -i $INITIAL_PROGRAM_TXID --randomizer $randomizer" "Running main demo binary"
+run_command "demo -f $FUNDING_TXID -i $INITIAL_PROGRAM_TXID --randomizer $randomizer --funding-tx-vout $FUNDING_VOUT" "Running main demo binary"
 wait_for_user
 
 ################################################################################
